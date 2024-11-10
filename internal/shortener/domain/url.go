@@ -8,10 +8,10 @@ import (
 )
 
 type URLInfo struct {
-	OriginalURL   string    `redis:"original_url"`
-	CreatedAt     time.Time `redis:"created_at"`
-	ClickCounts   int64     `redis:"click_counts"`
-	LastEnteredAt time.Time `redis:"last_entered_at"`
+	OriginalURL   string    `redis:"original_url" json:"original_url"`
+	CreatedAt     time.Time `redis:"created_at" json:"created_at"`
+	ClickCounts   int64     `redis:"click_counts" json:"click_counts"`
+	LastEnteredAt time.Time `redis:"last_entered_at" json:"last_entered_at"`
 }
 
 type URLs struct {

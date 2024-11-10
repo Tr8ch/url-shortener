@@ -73,15 +73,12 @@ func run(port string) {
 
 	errs := make(chan error, 2)
 	go func() {
-		slog.Info(
-			"listening",
-			"address", addr,
-		)
+		fmt.Printf("%v -- LISTENING ON ADDRESS %v\n", time.Now().Format(time.DateTime), addr)
 
 		if err := server.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
 			errs <- err
 		}
-		slog.Info("Stopped serving new connections")
+		fmt.Printf("%v -- STOPPED SERVING NEW CONNECTIONS\n", time.Now().Format(time.DateTime))
 	}()
 
 	go func() {
@@ -99,5 +96,5 @@ func run(port string) {
 		errs <- fmt.Errorf("%s", sig)
 	}()
 
-	slog.Info("terminated", "err", <-errs)
+	fmt.Printf("%v -- TERMINATED: ERR = %v\n", time.Now().Format(time.DateTime), <-errs)
 }
