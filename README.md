@@ -70,4 +70,4 @@ Swagger-документация предоставляет интерактив
 
 Для доступа к документации Swagger откройте `http://<service-url>/swagger/index.html`.
 
-## [Установка и настройка](https://github.com/Tr8ch/url-shortener/DEVELOPMENT.md)
+## -> [Установка и настройка](https://github.com/Tr8ch/url-shortener/blob/main/DEVELOPMENT.md) <-
