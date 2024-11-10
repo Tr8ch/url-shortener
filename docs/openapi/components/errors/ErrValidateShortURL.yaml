@@ -1,0 +1,15 @@
+type: object
+properties:
+  code:
+    type: integer
+  status:
+    type: string
+  reason:
+    type: string
+  message:
+    type: string
+example:
+  code: 400
+  status: Bad Request
+  reason: incorrect "short_url" field
+  message: The request was malformed or contained invalid parameters

@@ -1,0 +1,9 @@
+summary: Получить все ссылки
+operationId: getURLs
+security: []
+responses:
+  "200":
+    description: OK
+    content:
+      application/json:
+        $ref: ../../components/responses/GetURLs.yaml

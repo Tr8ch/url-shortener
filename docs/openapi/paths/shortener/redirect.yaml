@@ -1,0 +1,15 @@
+summary: Перенаправить по короткой ссылке
+operationId: redirect
+security: []
+parameters:
+  - $ref: ../../components/paths/link.yaml
+responses:
+  "301":
+    description: Moved Permanently
+  "404":
+    description: Not Found
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: "../../components/errors/ErrShortURLNotFound.yaml"

@@ -1,0 +1,19 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: URL Shortener API
+  description: "Генерирует уникальные короткие ссылки для длинных URL, предоставленных пользователем. GitHub - https://github.com/Tr8ch/url-shortener."
+servers:
+  - url: http://localhost:8888
+paths:
+  /shortener:
+    post:
+      $ref: paths/shortener/create_short_url.yaml
+    get:
+      $ref: paths/shortener/get_urls.yaml
+  /{link}:
+    delete:
+      $ref: paths/shortener/delete_url.yaml
+  /stats/{link}:
+    get:
+      $ref: paths/shortener/get_stats.yaml

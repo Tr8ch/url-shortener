@@ -1,0 +1,6 @@
+in: path
+name: link
+description: Короткая ссылка
+required: true
+schema:
+  type: string

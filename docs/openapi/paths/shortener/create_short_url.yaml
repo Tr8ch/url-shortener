@@ -1,0 +1,22 @@
+summary: Создать короткую ссылку
+operationId: createShortUrl
+security: []
+requestBody:
+  content:
+    application/json:
+      $ref: ../../components/requests/CreateShortURLRequest.yaml
+responses:
+  "200":
+    description: Success
+    content:
+      application/json:
+        $ref: "../../components/responses/CreateShortURLResponse.yaml"
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: "../../components/errors/ErrValidateProtocolResponse.yaml"
+            - $ref: "../../components/errors/ErrValidateURLResponse.yaml"
+            - $ref: "../../components/errors/ErrParseJSONResponse.yaml"

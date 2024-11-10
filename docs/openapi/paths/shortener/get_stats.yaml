@@ -1,0 +1,25 @@
+summary: Получить статистику
+operationId: getStats
+security: []
+parameters:
+  - $ref: ../../components/paths/link.yaml
+responses:
+  "200":
+    description: OK
+    content:
+      application/json:
+        $ref: ../../components/responses/GetStats.yaml
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: "../../components/errors/ErrValidateShortURL.yaml"
+  "404":
+    description: Not Found
+    content:
+      application/json:
+        schema:
+          oneOf:
+            - $ref: "../../components/errors/ErrShortURLNotFound.yaml"

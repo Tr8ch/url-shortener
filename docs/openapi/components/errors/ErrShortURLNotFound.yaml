@@ -1,0 +1,15 @@
+type: object
+properties:
+  code:
+    type: integer
+  status:
+    type: string
+  reason:
+    type: string
+  message:
+    type: string
+example:
+  code: 404
+  status: Not Found
+  reason: short URL not found
+  message: The requested resource could not be found
