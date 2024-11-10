@@ -1,0 +1,6 @@
+services:
+  # Redis (Valkey) - cache service.
+  redis:
+    image: valkey/valkey:8.0.1-alpine
+    ports:
+      - 6379:6379
