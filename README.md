@@ -81,7 +81,7 @@ cd docs
 npm start
 ```
 
-Подробнее вы можете узнать тут -> [README](https://github.com/Tr8ch/url-shortener/docs/blob/main/README.md)
+Подробнее вы можете узнать тут -> [README](https://github.com/Tr8ch/url-shortener/blob/main/docs/README.md)
 
 
-## -> [Установка и настройка API](https://github.com/Tr8ch/url-shortener/DEVELOPMENT.md) <-
+## -> [Установка и настройка API](https://github.com/Tr8ch/url-shortener/blob/main/DEVELOPMENT.md) <-
